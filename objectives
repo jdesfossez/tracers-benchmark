@@ -1,0 +1,8 @@
+Objective 
+1.1:
+	Create a simple program (clock_gettime) that repeatedly calls the clock_gettime syscall and stores the measured values in memory and prints them to stdout
+	input:
+		program argurments:
+			number of repetitions (no_reps)
+	output:
+		print to stdout the list of timestamps
