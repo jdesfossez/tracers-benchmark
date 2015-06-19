@@ -17,7 +17,7 @@ Objectives
 		ts_printf(ts_t *t): print sec and nsec part of t
 
 2.1:
-	Create a benchmark utility (bm_util.h bm_util.c) and a test program for the utility (bm_test)
+	Create a benchmark utility (bm_util.h bm_util.c), a test program for the utility (bm_test) and an R script (bm_test.R) to confirm test statistics
 	Builds on objective:
 		1.2
 	functions:
@@ -31,3 +31,8 @@ Objectives
 	Expand clock_gettime to compute and save intervals and statistics using bm_util.c
 	Builds on objectives:
 		1.1 and 2.1
+
+4.1:
+	Create a bash script that creates a lttng session, runs clock_gettime, saves the trace to "traces/" and destroys the session.
+	Builds on objectives:
+		3.1
