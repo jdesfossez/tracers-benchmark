@@ -1,4 +1,4 @@
-Objective 
+Objectives
 1.1:
 	Create a simple program (clock_gettime) that repeatedly calls the clock_gettime syscall and stores the measured values in memory and prints them to stdout
 	input:
@@ -19,7 +19,7 @@ Objective
 2.1:
 	Create a benchmark utility (bm_util.h bm_util.c) and a test program for the utility (bm_test)
 	Builds on objective:
-		2.1
+		1.2
 	functions:
 		timestamps_to_intervals(ts_t *ti, ts_t *tf, long *dt, int size)
 		compute_mean(long *dt, int size)
@@ -27,3 +27,7 @@ Objective
 		save_intervals(long *dt, int size)
 		save_statistics(double mean, double std)
 
+3.1:
+	Expand clock_gettime to compute and save intervals and statistics using bm_util.c
+	Builds on objectives:
+		1.1 and 2.1
