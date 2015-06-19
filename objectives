@@ -7,12 +7,23 @@ Objective
 	output:
 		print to stdout the list of timestamps
 1.2:
-	Create a timespec utility (ts_util.h ts_util.c) and a test file for the utility (ts_test)
-	functions:
+	Create a timespec utility (ts_util.h ts_util.c) and a test program for the utility (ts_test)
 	define type ts_t
-	bool ts_is_equal(ts_t *t1, ts_t *t2): t1 == t2?
-	bool ts_is_less(ts_t *t1, ts_t *t2): t1 < t2?
-	ts_t ts_sub(ts_t *t1, ts_t *t2): t1 -t2
-	ts_to_l(ts_t *t): convert to long
-	ts_printf(ts_t *t): print sec and nsec part of t
+	functions:
+		bool ts_is_equal(ts_t *t1, ts_t *t2): t1 == t2?
+		bool ts_is_less(ts_t *t1, ts_t *t2): t1 < t2?
+		ts_t ts_sub(ts_t *t1, ts_t *t2): t1 -t2
+		ts_to_l(ts_t *t): convert to long
+		ts_printf(ts_t *t): print sec and nsec part of t
+
+2.1:
+	Create a benchmark utility (bm_util.h bm_util.c) and a test program for the utility (bm_test)
+	Builds on objective:
+		2.1
+	functions:
+		timestamps_to_intervals(ts_t *ti, ts_t *tf, long *dt, int size)
+		compute_mean(long *dt, int size)
+		compute_std(long *dt, int size)
+		save_intervals(long *dt, int size)
+		save_statistics(double mean, double std)
 
