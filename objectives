@@ -38,13 +38,7 @@ Objectives
 	Expand clock_gettime to compute and save intervals and statistics using bm_util.c
 	Builds on objectives:
 		1.1 and 2.1
-	input:
-		program arguments:
-			number of repetitions (no_reps)
-		script arguments:
-			sample size (sample_size)
 	output:
-		print to stdout the list of timestamps (sample)
 		intervals statistics (statistics)
 
 4.1:
@@ -57,8 +51,23 @@ Objectives
 
 4.2:
 	Create a bash script that prints a system tap script file and runs system tap on clock_gettime
-	Build on objectives:
+	Builds on objectives:
 		3.1
 	input:
 		script arguments:
 			sample size
+	ouput
+		script output:
+			systemp tap script (clock_gettime.stp)
+
+4.3:
+	Create a bash script that runs perf on clock_gettime
+	Builds on objectivs:
+		3.1
+	input:
+		script arguments:
+			sample size
+	output:
+		script output:
+			stdout redirected to clock_gettime.out
+			perf record (perf.data/perf.data.old
