@@ -156,3 +156,11 @@ Objectives
 	intput:
 		script argument:
 			add no_thread to lttng_snapshot.param
+
+6.3:
+	Expand system_tap.sh to explore the parameter "number of threads" of clock_gettime_pthread. Input arguments are read through a file instead.
+	Builds on objectives:
+		5.3 and 5.4
+	input:
+		script arguments:
+			read from file: no_thread, sample_size (system_tap.param)
