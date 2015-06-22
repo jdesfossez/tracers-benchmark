@@ -139,3 +139,12 @@ Objectives
 	Expand clock_gettime_pthread to pin each thread on a cpu (pthread_setaffinity_np) and wait for all threads to be ready before starting the benchmark (phtread_barrier_wait).
 	Builds on objectives:
 		4.6
+
+
+6.1:
+	Expand lttng.sh to explore the parameter "number of threads" of clock_gettime_pthread.
+	Builds on objectives:
+		5.1
+	intput:
+		script argument:
+			add no_thread to lttng.param
