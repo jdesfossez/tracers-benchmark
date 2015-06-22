@@ -8,5 +8,5 @@ prog_name=clock_gettime
 sample_size=$1
 
 cmd="./$prog_name -s $sample_size"
-sudo perf record -e 'syscalls:sys_enter_getuid,syscalls:sys_exit_getuid' $cmd > ${prog_name}.out
+sudo perf record -e 'syscalls:sys_enter_clock_gettime,syscalls:sys_exit_clock_gettime' $cmd > ${prog_name}.out
 
