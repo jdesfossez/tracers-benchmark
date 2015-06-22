@@ -71,3 +71,14 @@ Objectives
 		script output:
 			stdout redirected to clock_gettime.out
 			perf record (perf.data/perf.data.old
+
+4.4:
+	Create a bash script that runs ftrace (trace-cmd) on clock_gettime
+	Builds on objectives:
+		3.1
+	input:
+		script arguments:
+			sample size
+	output:
+		script output:
+			stdout redirected to clock_gettime.out
