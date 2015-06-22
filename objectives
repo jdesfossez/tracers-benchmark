@@ -102,3 +102,14 @@ Objectives
 	output:
 		script output:
 			file containing a csv table of parameters and statistics (clock_gettime_lttng.csv)
+
+5.2:
+	Expand lttng-snapshot.sh (renamed lttng_snapshot.sh) to do parameter exploration of num-subbuf and subbuf-size, in snapshot mode. Input arguments range are read form file (lttng_snapshot.param), including sample_size.
+	Builds on objectives:
+		4.5
+	input:
+		script arguments:
+			file containing range of parameters (lttng_snapshot.param)
+	output:
+		script output:
+			file containing a csv table of parameters and statistics (clock_gettime_lttng_snapshot.csv)
