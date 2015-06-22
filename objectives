@@ -144,7 +144,15 @@ Objectives
 6.1:
 	Expand lttng.sh to explore the parameter "number of threads" of clock_gettime_pthread.
 	Builds on objectives:
-		5.1
+		5.1 and 5.4
 	intput:
 		script argument:
 			add no_thread to lttng.param
+
+6.2:
+	Expand lttng_snapshot.sh to explore the parameter "number of threads" of clock_gettime_pthread.
+	Builds on objectives:
+		5.2 and 5.4
+	intput:
+		script argument:
+			add no_thread to lttng_snapshot.param
