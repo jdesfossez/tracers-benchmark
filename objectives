@@ -42,7 +42,7 @@ Objectives
 		intervals statistics (statistics)
 
 4.1:
-	Create a bash script that creates a lttng session, runs clock_gettime, saves the trace to "traces/" and destroys the session.
+	Create a bash script (lttng.sh) that creates a lttng session, runs clock_gettime, saves the trace to "traces/" and destroys the session.
 	Builds on objectives:
 		3.1
 	input:
@@ -50,7 +50,7 @@ Objectives
 			sample size
 
 4.2:
-	Create a bash script that prints a system tap script file and runs system tap on clock_gettime
+	Create a bash script (system_tap.sh) that prints a system tap script file and runs system tap on clock_gettime
 	Builds on objectives:
 		3.1
 	input:
@@ -61,7 +61,7 @@ Objectives
 			systemp tap script (clock_gettime.stp)
 
 4.3:
-	Create a bash script that runs perf on clock_gettime
+	Create a bash script (perf.sh) that runs perf on clock_gettime
 	Builds on objectivs:
 		3.1
 	input:
@@ -70,10 +70,10 @@ Objectives
 	output:
 		script output:
 			stdout redirected to clock_gettime.out
-			perf record (perf.data/perf.data.old
+			perf record data (perf.data/perf.data.old)
 
 4.4:
-	Create a bash script that runs ftrace (trace-cmd) on clock_gettime
+	Create a bash script (ftrace.sh) that runs ftrace (trace-cmd) on clock_gettime
 	Builds on objectives:
 		3.1
 	input:
@@ -82,3 +82,12 @@ Objectives
 	output:
 		script output:
 			stdout redirected to clock_gettime.out
+			trace record data (trace.dat)
+
+4.5:
+	Create a bash script (lttng-snapshot.sh) that creates a lttng session in snapshot mode, runs clock_gettime and destroys the session.
+	Builds on objectives:
+		3.1
+	input:
+		script arguments:
+			sample size
