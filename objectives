@@ -91,3 +91,14 @@ Objectives
 	input:
 		script arguments:
 			sample size
+
+5.1:
+	Expand lttng.sh to do parameter exploration of num-subbuf and subbuf-size. Input arguments range are read form file (lttng.param), including sample_size.
+	Builds on objectives:
+		4.1
+	input:
+		script arguments:
+			file containing range of parameters (lttng.param)
+	output:
+		script output:
+			file containing a csv table of parameters and statistics (clock_gettime_lttng.csv)
