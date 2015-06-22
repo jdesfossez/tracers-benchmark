@@ -173,3 +173,10 @@ Objectives
 		script arguments:
 			read from file: no_thread, sample_size (system_tap.param)
 
+6.5:
+	Expand ftrace.sh to explore the parameter "number of threads" of clock_gettime_pthread. Input arguments are read through a file instead.
+	Builds on objectives:
+		4.4 and 5.4
+	input:
+		script arguments:
+			read from file: no_thread, sample_size (system_tap.param)
