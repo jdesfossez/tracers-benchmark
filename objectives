@@ -134,3 +134,8 @@ Objectives
 	ouput:
 		script output
 			file containing a csv table of parameters and statistics (clock_gettime_system_tap.csv)
+
+5.4:
+	Expand clock_gettime_pthread to pin each thread on a cpu (pthread_setaffinity_np) and wait for all threads to be ready before starting the benchmark (phtread_barrier_wait).
+	Builds on objectives:
+		4.6
