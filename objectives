@@ -23,6 +23,7 @@ Objectives
 		script argument:
 			scaling governor: performance or powersave
 
+
 2.1:
 	Create a benchmark utility (bm_util.h bm_util.c), a test program for the utility (bm_test) and an R script (bm_test.R) to confirm test statistics
 	Builds on objective:
@@ -34,12 +35,14 @@ Objectives
 		save_intervals(long *dt, int size)
 		save_statistics(double mean, double std)
 
+
 3.1:
 	Expand clock_gettime to compute and save intervals and statistics using bm_util.c
 	Builds on objectives:
 		1.1 and 2.1
 	output:
 		intervals statistics (statistics)
+
 
 4.1:
 	Create a bash script (lttng.sh) that creates a lttng session, runs clock_gettime, saves the trace to "traces/" and destroys the session.
@@ -91,6 +94,16 @@ Objectives
 	input:
 		script arguments:
 			sample size
+
+4.6:
+	Multithread clock_gettime using pthreads. Change clock_gettime argument from no_reps to sample_size (= no_reps - 1)
+	Builds on objectives:
+		3.1
+	input arguments:
+		program arguments:
+			sample_size
+			no_threads
+			
 
 5.1:
 	Expand lttng.sh to do parameter exploration of num-subbuf and subbuf-size. Input arguments range are read form file (lttng.param), including sample_size.
