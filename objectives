@@ -16,6 +16,12 @@ Objectives
 		ts_to_l(ts_t *t): convert to long
 		ts_printf(ts_t *t): print sec and nsec part of t
 
+1.3:
+	Create a script (set_cpus_performance.sh) to switch between performance and powersave scaling governors, if relevant.
+	input:
+		script argument:
+			scaling governor: performance or powersave
+
 2.1:
 	Create a benchmark utility (bm_util.h bm_util.c), a test program for the utility (bm_test) and an R script (bm_test.R) to confirm test statistics
 	Builds on objective:
@@ -36,3 +42,6 @@ Objectives
 	Create a bash script that creates a lttng session, runs clock_gettime, saves the trace to "traces/" and destroys the session.
 	Builds on objectives:
 		3.1
+	input:
+		script arguments:
+			sample size
