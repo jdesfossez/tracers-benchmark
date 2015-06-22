@@ -113,3 +113,11 @@ Objectives
 	output:
 		script output:
 			file containing a csv table of parameters and statistics (clock_gettime_lttng_snapshot.csv)
+
+5.3:
+	Expand system_tap.sh to explore various probe contents.
+	Builds on objectives:
+		4.2
+	ouput:
+		script output
+			file containing a csv table of parameters and statistics (clock_gettime_system_tap.csv)
