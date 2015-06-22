@@ -5,7 +5,8 @@ Objectives
 		program argurments:
 			number of repetitions (no_reps)
 	output:
-		print to stdout the list of timestamps
+		print to stdout the list of timestamps (sample)
+
 1.2:
 	Create a timespec utility (ts_util.h ts_util.c) and a test program for the utility (ts_test)
 	define type ts_t
@@ -37,10 +38,26 @@ Objectives
 	Expand clock_gettime to compute and save intervals and statistics using bm_util.c
 	Builds on objectives:
 		1.1 and 2.1
+	input:
+		program arguments:
+			number of repetitions (no_reps)
+		script arguments:
+			sample size (sample_size)
+	output:
+		print to stdout the list of timestamps (sample)
+		intervals statistics (statistics)
 
 4.1:
 	Create a bash script that creates a lttng session, runs clock_gettime, saves the trace to "traces/" and destroys the session.
 	Builds on objectives:
+		3.1
+	input:
+		script arguments:
+			sample size
+
+4.2:
+	Create a bash script that prints a system tap script file and runs system tap on clock_gettime
+	Build on objectives:
 		3.1
 	input:
 		script arguments:
