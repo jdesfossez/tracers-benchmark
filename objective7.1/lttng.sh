@@ -51,7 +51,7 @@ for no_thread in $no_threads; do
 						lttng stop
 						lttng destroy
 						no_events=$(babeltrace traces/kernel/ 2>/dev/null | grep clock_gettime | wc -l)
-						no_lost_events=$((2 * $sample_size + 2 - $no_events))
+						no_lost_events=$((2 * $sample_size + 2 * $no_thread - $no_events))
 						save_stats
 						clean
 					done

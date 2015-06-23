@@ -2,5 +2,5 @@ no_thread: 1 4
 sample_size: 100000
 output: mmap splice
 overflow: discard overwrite
-num_subbuf: 2 4
-subbuf_size: 64 128
+num_subbuf: 4 8 16
+subbuf_size: 128 256 512
