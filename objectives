@@ -190,10 +190,11 @@ Objectives
 			add no_lost_events to the .csv file
 
 7.2:
-	Expand lttng_snaphot.sh to count the number of lost events and record it in the .csv file. Add a "clean" function to rm output files between each run.
+	WARNING: When overloaded, system_tap output to file seems buggy, resulting in a negative number of lost events
+	Expand system_tap.sh to count the number of lost events and record it in the .csv file. Add a "clean" function to rm output files between each run.
 	Buils on objectives:
-		6.2
+		6.3
 	output:
 		script output:
-		add no_lost_events to the .csv file
-	
+			add no_lost_events to the .csv file
+
