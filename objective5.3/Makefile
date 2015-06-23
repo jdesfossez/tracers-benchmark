@@ -10,3 +10,4 @@ clean:
 	rm clock_gettime_system_tap.csv
 	rm sample
 	rm statistics
+	rm stap.out

@@ -12,3 +12,4 @@ clean:
 	rm $(PROG_NAME)_$(TRACER_NAME).csv
 	rm sample
 	rm statistics
+	rm stap.out

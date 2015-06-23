@@ -22,11 +22,11 @@ declare -a probe_sys_entry_content
 declare -a probe_sys_exit_content
 declare -a probe_content
 probe_sys_entry_content[0]=" "
-probe_sys_entry_content[1]='printf("syscall.getuid.entry\n")'
-probe_sys_entry_content[2]='printf("[%ld] syscall.getuid.entry\n", gettimeofday_us())'
+probe_sys_entry_content[1]='printf("syscall.clock_gettime.entry\n")'
+probe_sys_entry_content[2]='printf("[%ld] syscall.clock_gettime.entry\n", gettimeofday_us())'
 probe_sys_exit_content[0]=" "
-probe_sys_exit_content[1]='printf("syscall.getuid.exit\n")'
-probe_sys_exit_content[2]='printf("[%ld] syscall.getuid.exit\n", gettimeofday_us())'
+probe_sys_exit_content[1]='printf("syscall.clock_gettime.exit\n")'
+probe_sys_exit_content[2]='printf("[%ld] syscall.clock_gettime.exit\n", gettimeofday_us())'
 probe_content[0]="empty probes"
 probe_content[1]="print entry and exit to file"
 probe_content[2]="print entry and exit to file with gettimeofday_us() timestamp"
@@ -34,9 +34,9 @@ probe_content[2]="print entry and exit to file with gettimeofday_us() timestamp"
 for no_thread in $no_threads; do
 	for sample_size in $sample_sizes; do
 		for i in 0 1 2; do
-			echo "probe syscall.getuid {${probe_sys_entry_content[$i]}}" > ${prog_name}.stp
-			echo "probe syscall.getuid.return {${probe_sys_exit_content[$i]}}" >> ${prog_name}.stp
-			stap -g --suppress-time-limits -v ${prog_name}.stp -c "./$prog_name -s $sample_size -t $no_thread"
+			echo "probe syscall.clock_gettime {${probe_sys_entry_content[$i]}}" > ${prog_name}.stp
+			echo "probe syscall.clock_gettime.return {${probe_sys_exit_content[$i]}}" >> ${prog_name}.stp
+			stap -g --suppress-time-limits -v ${prog_name}.stp -c "./$prog_name -s $sample_size -t $no_thread" > stap.out
 			save_stats
 		done
 	done
