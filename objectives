@@ -204,3 +204,11 @@ Objectives
 		6.4
 	output:
 		add no_lost_events to the .csv file
+
+7.4:
+	WARNING: counting lost events is very slow! (slower than clock_gettime)
+	Expand ftrace.sh to count the number of lost events and record it in the .csv file. Add a clean function to rm output files between each run.
+	Builds on objectives:
+		6.5
+	output:
+		add no_lost_events to the .csv file
