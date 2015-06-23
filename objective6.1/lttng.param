@@ -1,4 +1,6 @@
-no_thread: 1 4
+no_thread: 1
 sample_size: 1000
-num_subbuf: 2 4
-subbuf_size: 64 128
+output: mmap splice
+overflow: discard overwrite
+num_subbuf: 4
+subbuf_size: 128
