@@ -47,8 +47,6 @@ Objectives
 	Create a R script (R_histogram.R) that plots a histogram of the data (smaller than mean + 5 * std)
 	Builds on objective:
 		3.1
-	output:
-
 
 4.1:
 	Create a bash script (lttng.sh) that creates a lttng session, runs clock_gettime, saves the trace to "traces/" and destroys the session.
@@ -186,6 +184,11 @@ Objectives
 	input:
 		script arguments:
 			read from file: no_thread, sample_size (system_tap.param)
+
+6.6:
+	Expand clock_gettime_pthread to add getuid system call (getuid_pthread.c)
+	Builds on objectives:
+		5.4
 
 7.1:
 	Expand lttng.sh to count the number of lost events and record it in the .csv file. Add a "clean" function to rm output files between each run.
