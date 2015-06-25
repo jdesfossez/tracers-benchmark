@@ -1,0 +1,8 @@
+no_thread: 1 4
+sample_size: 100000
+
+## lttng ##
+output: mmap splice
+overflow: discard overwrite
+num_subbuf: 4 16
+subbuf_size: 128 512
