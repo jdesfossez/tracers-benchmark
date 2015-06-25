@@ -43,6 +43,12 @@ Objectives
 	output:
 		intervals statistics (statistics)
 
+3.2:
+	Create a R script (R_histogram.R) that plots a histogram of the data (smaller than mean + 5 * std)
+	Builds on objective:
+		3.1
+	output:
+
 
 4.1:
 	Create a bash script (lttng.sh) that creates a lttng session, runs clock_gettime, saves the trace to "traces/" and destroys the session.
