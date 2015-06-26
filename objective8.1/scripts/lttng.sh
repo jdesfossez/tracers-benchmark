@@ -2,6 +2,14 @@
 
 cd ../$(dirname $0)
 
+if [ ! -d results ]; then
+    mkdir results
+fi
+
+if [ ! -f getuid_pthread ];then
+    make
+fi
+
 prog_name=getuid_pthread
 tracer_name=lttng
 syscall=getuid
