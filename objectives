@@ -108,6 +108,13 @@ Objectives
 			sample_size
 			no_threads
 			
+4.7:
+	Create a bash script that runs clock_gettime with no tracing.
+	Builds on objectives:
+		3.1
+	input arguments:
+		program arguments:
+			sample size
 
 5.1:
 	Expand lttng.sh to do parameter exploration of num-subbuf and subbuf-size. Input arguments range are read form file (lttng.param), including sample_size.
