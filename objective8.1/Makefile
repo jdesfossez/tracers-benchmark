@@ -6,5 +6,4 @@ all:
 	gcc -o $(PROG_NAME) $(SRC) $(CFLAGS)
 
 clean:
-	rm $(PROG_NAME)
 	rm -r results

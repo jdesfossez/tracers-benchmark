@@ -8,6 +8,7 @@ fi
 
 scripts/set_cpus_performance.sh performance
 make
+scripts/calibration.sh
 scripts/lttng.sh
 scripts/lttng_snapshot.sh
 scripts/system_tap.sh
