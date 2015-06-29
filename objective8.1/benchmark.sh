@@ -1,5 +1,7 @@
 #!/bin/bash -x
 
+cd $(dirname $0)
+
 if [ ! -d results ]; then
 	mkdir results
 fi

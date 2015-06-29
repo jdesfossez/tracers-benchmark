@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-cd ../$(dirname $0)
+cd $(dirname $0)/..
 
 if [ ! -d results ]; then
     mkdir results
