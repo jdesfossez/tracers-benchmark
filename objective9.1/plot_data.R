@@ -1,6 +1,6 @@
 library("Hmisc")
 
-path <- "git/compare_tracers/objective10.1/results/"
+path <- "git/compare_tracers/objective9.1/results/"
 print(paste(path,"getuid", sep=""))
 
 data_lttng <- read.csv(paste(path, "getuid_pthread_lttng.csv", sep=""))
