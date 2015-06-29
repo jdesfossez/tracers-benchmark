@@ -233,3 +233,8 @@ Objectives
 		script ouput:
 			all results are saved in .csv format in the results directory
 
+9.1:
+	Use objective 8.1 to generate results on octosquare to extract scaling as the number of threads increases. Create R scripts to plot the data (with error bars).
+	Build on objective:
+		8.1
+	input
