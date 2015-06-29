@@ -234,7 +234,14 @@ Objectives
 			all results are saved in .csv format in the results directory
 
 9.1:
-	Use objective 8.1 to generate results on octosquare to extract scaling as the number of threads increases. Create R scripts to plot the data (with error bars).
+	Use objective 8.1 to generate results on octosquare to extract scaling as the number of threads increases. Create R scripts to plot the data.
 	Build on objective:
 		8.1
-	input
+	input:
+		script input:
+			param
+
+10.1:
+	Same as 9.1, but densify samples for perf and ftrace: 1 2 4x ... 64
+	Builds on objective:
+		9.1

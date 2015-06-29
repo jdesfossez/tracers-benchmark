@@ -1,0 +1,22 @@
+mean,std,no_lost_events,no_thread,sample_size,probe_content
+1221.6,416.94,NA,1,1048576,empty probes
+1750.4,249.39,NA,2,1048576,empty probes
+3491.8,999.32,NA,4,1048576,empty probes
+13459,5735.3,NA,8,1048576,empty probes
+51321,6269.7,NA,16,1048576,empty probes
+1.5402e+05,58006,NA,32,1048576,empty probes
+4.1554e+05,1.9652e+05,NA,64,1048576,empty probes
+1635.7,621.22,0,1,1048576,print entry and exit to file
+2181.4,686.52,1,2,1048576,print entry and exit to file
+4504.1,1150.1,17,4,1048576,print entry and exit to file
+15844,3030.6,102,8,1048576,print entry and exit to file
+44643,16998,188,16,1048576,print entry and exit to file
+1.6854e+05,62409,19,32,1048576,print entry and exit to file
+4.142e+05,1.8776e+05,39,64,1048576,print entry and exit to file
+2602.2,640.4,0,1,1048576,print entry and exit to file with gettimeofday_us() timestamp
+3510.5,835.42,45,2,1048576,print entry and exit to file with gettimeofday_us() timestamp
+5746,1597.6,271950,4,1048576,print entry and exit to file with gettimeofday_us() timestamp
+15027,2820.3,2,8,1048576,print entry and exit to file with gettimeofday_us() timestamp
+47668,12412,122,16,1048576,print entry and exit to file with gettimeofday_us() timestamp
+1.5474e+05,63789,18,32,1048576,print entry and exit to file with gettimeofday_us() timestamp
+4.4145e+05,1.3288e+05,13,64,1048576,print entry and exit to file with gettimeofday_us() timestamp
