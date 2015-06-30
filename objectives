@@ -275,3 +275,8 @@ Objectives
 	Expand plot_data.R to plot the mean times, overheads and relative overheads. Rerun experiment with bigger sample size.
 	Builds on objective:
 		9.1
+
+11.1:
+	Same as 10.2, but with the getuid_pthread.c adapted to octosquare from 7.5. Densify samples as in 10.1.
+	Builds on objectives:
+		7.5, 10.1-10.2

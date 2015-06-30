@@ -1,0 +1,55 @@
+mean,std,no_lost_events,no_thread,sample_size,probe_content
+1043.1,895.73,NA,1,8648640,empty probes
+2071.6,1044.8,NA,2,8648640,empty probes
+6831.4,1486.6,NA,4,8648640,empty probes
+17573,4902.7,NA,8,8648640,empty probes
+51396,4254.6,NA,12,8648640,empty probes
+93261,6779.4,NA,16,8648640,empty probes
+1.2818e+05,15953,NA,20,8648640,empty probes
+1.897e+05,21723,NA,24,8648640,empty probes
+2.3199e+05,77572,NA,28,8648640,empty probes
+2.4234e+05,1.1715e+05,NA,32,8648640,empty probes
+2.7763e+05,97198,NA,36,8648640,empty probes
+3.0869e+05,88078,NA,40,8648640,empty probes
+3.1056e+05,1.2479e+05,NA,44,8648640,empty probes
+3.3699e+05,1.114e+05,NA,48,8648640,empty probes
+3.4958e+05,1.5498e+05,NA,52,8648640,empty probes
+3.876e+05,1.4279e+05,NA,56,8648640,empty probes
+4.1956e+05,1.3514e+05,NA,60,8648640,empty probes
+4.2192e+05,1.7539e+05,NA,64,8648640,empty probes
+1505.5,1165.1,3,1,8648640,print entry and exit to file
+3245.3,1087,41,2,8648640,print entry and exit to file
+5196,1628.8,63,4,8648640,print entry and exit to file
+22105,3520.7,-15,8,8648640,print entry and exit to file
+42749,9308.6,-3,12,8648640,print entry and exit to file
+72206,17815,-20,16,8648640,print entry and exit to file
+1.3401e+05,13538,-13,20,8648640,print entry and exit to file
+1.7757e+05,21564,3,24,8648640,print entry and exit to file
+1.8852e+05,74707,29059,28,8648640,print entry and exit to file
+2.2137e+05,90496,170161,32,8648640,print entry and exit to file
+2.4612e+05,84300,133,36,8648640,print entry and exit to file
+2.5038e+05,1.2527e+05,-12717,40,8648640,print entry and exit to file
+3.0441e+05,1.2828e+05,74,44,8648640,print entry and exit to file
+3.3199e+05,1.1598e+05,78,48,8648640,print entry and exit to file
+3.1844e+05,1.7051e+05,124,52,8648640,print entry and exit to file
+3.4008e+05,1.86e+05,46,56,8648640,print entry and exit to file
+4.0679e+05,1.7491e+05,62,60,8648640,print entry and exit to file
+4.2351e+05,1.7391e+05,135,64,8648640,print entry and exit to file
+2525.8,1362.2,440258,1,8648640,print entry and exit to file with gettimeofday_us() timestamp
+3977.5,1421.5,35,2,8648640,print entry and exit to file with gettimeofday_us() timestamp
+7002.9,1936.5,-45520,4,8648640,print entry and exit to file with gettimeofday_us() timestamp
+22018,3703.9,44869,8,8648640,print entry and exit to file with gettimeofday_us() timestamp
+49884,4813.5,349429,12,8648640,print entry and exit to file with gettimeofday_us() timestamp
+72650,17973,4,16,8648640,print entry and exit to file with gettimeofday_us() timestamp
+1.1194e+05,28776,1583398,20,8648640,print entry and exit to file with gettimeofday_us() timestamp
+1.6241e+05,35697,1,24,8648640,print entry and exit to file with gettimeofday_us() timestamp
+1.6555e+05,69316,19,28,8648640,print entry and exit to file with gettimeofday_us() timestamp
+1.9995e+05,72662,21,32,8648640,print entry and exit to file with gettimeofday_us() timestamp
+2.5386e+05,90201,-9,36,8648640,print entry and exit to file with gettimeofday_us() timestamp
+2.7904e+05,1.0932e+05,42,40,8648640,print entry and exit to file with gettimeofday_us() timestamp
+2.666e+05,1.4093e+05,23315,44,8648640,print entry and exit to file with gettimeofday_us() timestamp
+2.7972e+05,1.3418e+05,65220,48,8648640,print entry and exit to file with gettimeofday_us() timestamp
+3.2489e+05,1.5641e+05,48,52,8648640,print entry and exit to file with gettimeofday_us() timestamp
+3.6593e+05,1.564e+05,64,56,8648640,print entry and exit to file with gettimeofday_us() timestamp
+3.9836e+05,1.5204e+05,91,60,8648640,print entry and exit to file with gettimeofday_us() timestamp
+4.4266e+05,1.3625e+05,69,64,8648640,print entry and exit to file with gettimeofday_us() timestamp
