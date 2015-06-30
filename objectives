@@ -261,6 +261,11 @@ Objectives
 		script input:
 			param
 
+9.2:
+	Same as 8.1 but replace executing program with the new version of 7.5
+	Builds on objective:
+		7.5, 8.1
+
 10.1:
 	Same as 9.1, but densify samples for perf and ftrace: 1 2 4x ... 64
 	Builds on objective:
