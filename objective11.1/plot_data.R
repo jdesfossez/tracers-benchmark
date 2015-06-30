@@ -14,7 +14,7 @@ print(data_paths)
 make_title <- function(tracer){
   if(tracer == 1) title <- "Calibration"
   if(tracer == 2) title <- paste("Lttng\noutput = ", data[[tracer]]$output[1], ",", data[[tracer]]$overflow[1], ", num-subbuf =", data[[tracer]]$num_subbuf[1], ", subbuf-size =", data[[tracer]]$subbuf_size[1], "k")
-  if(tracer == 3) title <- paste("Lttng\nSnapshot mode, output = ", data[[tracer]]$num_subbuf[1], ", subbuf-size =", data[[tracer]]$subbuf_size[1], "k")
+  if(tracer == 3) title <- paste("Lttng\nSnapshot mode, num-subbuf = ", data[[tracer]]$num_subbuf[1], ", subbuf-size =", data[[tracer]]$subbuf_size[1], "k")
   if(tracer == 4) title <- "System tap"
   if(tracer == 5) title <- "Perf"
   if(tracer == 6) title <- "Ftrace (trace-cmd)"
@@ -46,23 +46,25 @@ x_label <- "Number of threads"
 y_label <- "Mean overhead (ns) per clock_gettime + getuid syscall"
 fig_paths <- sapply(c("figs/calibration.pdf","figs/lttng_overhead.pdf", "figs/lttng_snapshot_overhead.pdf", "figs/system_tap_overhead.pdf", "figs/perf_overhead.pdf", "figs/ftrace_overhead.pdf"), paste_path)
 
+overhead <- list()
 for (i in 2:6 ) {
   print(data[[i]])
   pdf(fig_paths[i])
-  overhead <- data[[i]]$mean - data_calib$mean
-  plot(data[[i]]$no_thread, overhead, xlab=x_label, ylab=y_label, main=make_title(i))
+  overhead[[i]] <- data[[i]]$mean - data_calib$mean
+  plot(data[[i]]$no_thread, overhead[[i]], xlab=x_label, ylab=y_label, main=make_title(i))
   dev.off()
 }
 
 x_label <- "Number of threads"
-y_label <- "Overhead relative to each clock_gettime + getuid syscall"
+y_label <- "Relative overhead for each clock_gettime + getuid syscall"
 fig_paths <- sapply(c("figs/calibration.pdf","figs/lttng_relative_overhead.pdf", "figs/lttng_snapshot_relative_overhead.pdf", "figs/system_tap_relative_overhead.pdf", "figs/perf_relative_overhead.pdf", "figs/ftrace_relative_overhead.pdf"), paste_path)
 
+overhead <- list()
 for (i in 2:6 ) {
   print(data[[i]])
   pdf(fig_paths[i])
-  overhead <- (data[[i]]$mean - data_calib$mean) / data_calib$mean
-  plot(data[[i]]$no_thread, overhead, xlab=x_label, ylab=y_label, main=make_title(i))
+  overhead[[i]] <- (data[[i]]$mean - data_calib$mean) / data_calib$mean
+  plot(data[[i]]$no_thread, overhead[[i]], ylim=range(c(0, overhead)), xlab=x_label, ylab=y_label, main=make_title(i))
   dev.off()
 }
 
@@ -95,5 +97,21 @@ par(new=T)
 plot(data[[5]]$no_thread, data[[5]]$mean, ylim=y_range, axes=F, xlab="", ylab="", pch=4)
 par(new=T)
 plot(data[[6]]$no_thread, data[[6]]$mean, ylim=y_range, axes=F, xlab="", ylab="", pch=5)
+legend("bottomright", c("lttng","lttng snapshot","system tap","perf","ftrace (trace-cmd)"), pch = c(1,2,3,4,5))
+dev.off()
+
+x_label <- "Number of threads"
+y_label <- "Relative overhead for each clock_gettime + getuid syscall"
+y_range <- c(0, 4)
+pdf(paste_path("figs/all_relative_overhead_zoom_y.pdf"))
+plot(data[[2]]$no_thread, overhead[[2]], ylim=y_range, xlab=x_label, ylab=y_label, pch=1)
+par(new=T)
+plot(data[[3]]$no_thread, overhead[[3]], ylim=y_range, axes=F, xlab="", ylab="", pch=2)
+par(new=T)
+plot(data_stap$no_thread, overhead[[4]], ylim=y_range, axes=F, xlab="", ylab="", pch=3)
+par(new=T)
+plot(data[[5]]$no_thread, overhead[[5]], ylim=y_range, axes=F, xlab="", ylab="", pch=4)
+par(new=T)
+plot(data[[6]]$no_thread, overhead[[6]], ylim=y_range, axes=F, xlab="", ylab="", pch=5)
 legend("bottomright", c("lttng","lttng snapshot","system tap","perf","ftrace (trace-cmd)"), pch = c(1,2,3,4,5))
 dev.off()
