@@ -260,3 +260,8 @@ Objectives
 	Same as 9.1, but densify samples for perf and ftrace: 1 2 4x ... 64
 	Builds on objective:
 		9.1
+
+10.2:
+	Expand plot_data.R to plot the mean times, overheads and relative overheads. Rerun experiment with bigger sample size.
+	Builds on objective:
+		9.1
