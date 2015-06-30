@@ -237,6 +237,11 @@ Objectives
 	output:
 		add no_lost_events to the .csv file
 
+7.5:
+	In octosquare, cores 2*i and 2*i+1 share resources. Modify getuid_pthread to pin threads in the relevant order: 0, 2, 4, ..., 62, 1, 3, 5, ..., 63
+	Builds on objectives: 
+		6.6
+
 8.1:
 	Integrate tracing benchmarks in a self-contained directory.
 	Builds on objectives:
