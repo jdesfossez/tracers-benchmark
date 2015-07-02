@@ -1,22 +1,22 @@
 mean,std,no_lost_events,no_thread,sample_size,probe_content
-1031.6,1069.3,NA,1,8388608,empty probes
-1474.9,762.2,NA,2,8388608,empty probes
-4087.8,1844.4,NA,4,8388608,empty probes
-14422,3357.7,NA,8,8388608,empty probes
-43710,12295,NA,16,8388608,empty probes
-1.5797e+05,52741,NA,32,8388608,empty probes
-4.4576e+05,1.755e+05,NA,64,8388608,empty probes
-1449,1202.3,2,1,8388608,print entry and exit to file
-2174.7,967.81,8,2,8388608,print entry and exit to file
-4858.9,1823.9,53,4,8388608,print entry and exit to file
-14494,3137.7,568,8,8388608,print entry and exit to file
-51056,8788.5,533,16,8388608,print entry and exit to file
-1.584e+05,66026,270,32,8388608,print entry and exit to file
-4.5237e+05,1.3285e+05,52,64,8388608,print entry and exit to file
-2508.1,1754.3,1,1,8388608,print entry and exit to file with gettimeofday_us() timestamp
-3577.3,1189.5,15,2,8388608,print entry and exit to file with gettimeofday_us() timestamp
-6135,2106.9,28,4,8388608,print entry and exit to file with gettimeofday_us() timestamp
-15146,3311.2,16,8,8388608,print entry and exit to file with gettimeofday_us() timestamp
-48343,12224,620,16,8388608,print entry and exit to file with gettimeofday_us() timestamp
-1.5543e+05,71889,115,32,8388608,print entry and exit to file with gettimeofday_us() timestamp
-4.044e+05,2.1081e+05,44410,64,8388608,print entry and exit to file with gettimeofday_us() timestamp
+1036.1,1043.7,NA,1,8388608,empty probes
+1574.4,1047.3,NA,2,8388608,empty probes
+3447.5,1586.2,NA,4,8388608,empty probes
+13292,2317.3,NA,8,8388608,empty probes
+50998,6209,NA,16,8388608,empty probes
+1.5629e+05,53930,NA,32,8388608,empty probes
+4.4013e+05,1.6247e+05,NA,64,8388608,empty probes
+1502.7,1054.4,0,1,8388608,print entry and exit to file
+2188.9,1126.5,12,2,8388608,print entry and exit to file
+4372.6,1683.1,286,4,8388608,print entry and exit to file
+14650,3114.5,633,8,8388608,print entry and exit to file
+50143,7612.6,626,16,8388608,print entry and exit to file
+1.5811e+05,72942,81,32,8388608,print entry and exit to file
+4.1741e+05,1.6615e+05,147,64,8388608,print entry and exit to file
+2514.2,1775.7,1719924,1,8388608,print entry and exit to file with gettimeofday_us() timestamp
+3493.9,1212.2,12,2,8388608,print entry and exit to file with gettimeofday_us() timestamp
+6049.7,2284.3,472729,4,8388608,print entry and exit to file with gettimeofday_us() timestamp
+12506,2964.5,22,8,8388608,print entry and exit to file with gettimeofday_us() timestamp
+46634,14101,526167,16,8388608,print entry and exit to file with gettimeofday_us() timestamp
+1.4882e+05,76401,-46333,32,8388608,print entry and exit to file with gettimeofday_us() timestamp
+4.1991e+05,1.9086e+05,191,64,8388608,print entry and exit to file with gettimeofday_us() timestamp
