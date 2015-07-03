@@ -243,7 +243,7 @@ Objectives
 		6.6
 
 7.6:
-	For a given number of threads, change cpu affinities randomly every 8192 = 2^13 trials, defined as BURST_SIZE. 
+	Expand getuid_pthread to change cpu affinities randomly every 8192 = 2^13 trials, defined as BURST_SIZE. 
 	Builds on objectives:
 		6.6
 
@@ -270,6 +270,11 @@ Objectives
 	Same as 8.1 but replace executing program with the new version of 7.5
 	Builds on objective:
 		7.5, 8.1
+
+9.3:
+	Same as 8.1 but replace executing program with the new version of 7.6. Add -n option to cmd in scripts.
+	Builds on objective:
+		7.6, 8.1
 
 10.1:
 	Same as 9.1, but densify samples for perf and ftrace: 1 2 4x ... 64
