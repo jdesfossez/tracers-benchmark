@@ -242,6 +242,11 @@ Objectives
 	Builds on objectives: 
 		6.6
 
+7.6:
+	For a given number of threads, change cpu affinities randomly every 8192 = 2^13 trials, defined as BURST_SIZE. 
+	Builds on objectives:
+		6.6
+
 8.1:
 	Integrate tracing benchmarks in a self-contained directory.
 	Builds on objectives:

@@ -64,7 +64,7 @@ for (i in 2:6 ) {
   print(data[[i]])
   pdf(fig_paths[i])
   overhead[[i]] <- (data[[i]]$mean - data_calib$mean) / data_calib$mean
-  plot(data[[i]]$no_thread, overhead[[i]], ylim=range(c(0, overhead)), xlab=x_label, ylab=y_label, main=make_title(i))
+  plot(data[[i]]$no_thread, overhead[[i]], ylim=range(c(0, overhead[[i]])), xlab=x_label, ylab=y_label, main=make_title(i))
   dev.off()
 }
 
