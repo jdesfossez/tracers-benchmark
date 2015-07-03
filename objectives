@@ -290,3 +290,9 @@ Objectives
 	Same as 10.2, but with the getuid_pthread.c adapted to octosquare from 7.5. Densify samples as in 10.1.
 	Builds on objectives:
 		7.5, 10.1-10.2
+
+11.2:
+	Same as 10.2, but with the getuid_pthread.c adapted to octosquare from 7.6.
+	Builds on objectives:
+		7.6, 10.1-10.2
+	
