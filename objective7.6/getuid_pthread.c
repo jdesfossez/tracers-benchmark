@@ -109,6 +109,7 @@ int main(int argc, char *argv[]){
 	int no_bursts_per_thread = sample_size_per_thread / BURST_SIZE;
 	assert(sample_size > 0);
 	assert(no_threads > 0);
+	assert(no_cpus > 0);
 	assert(sample_size == sample_size_per_thread * no_threads);
 	assert(sample_size_per_thread == no_bursts_per_thread * BURST_SIZE);
 	srand(time(NULL));
