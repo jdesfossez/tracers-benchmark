@@ -286,6 +286,11 @@ Objectives
 	Builds on objective:
 		7.6, 8.1
 
+9.4:
+	Same as objective 8.2, but with the scripts and program of objective 8.3
+	Builds on objectives:
+		8.2-8.3
+
 10.1:
 	Same as 9.1, but densify samples for perf and ftrace: 1 2 4x ... 64
 	Builds on objective:
@@ -305,4 +310,3 @@ Objectives
 	Same as 10.2, but with the getuid_pthread.c adapted to octosquare from 7.6.
 	Builds on objectives:
 		7.6, 10.1-10.2
-	
