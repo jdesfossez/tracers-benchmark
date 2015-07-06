@@ -259,9 +259,14 @@ Objectives
 			all results are saved in .csv format in the results directory
 
 8.2:
-	Run an experiment with clock_gettime to see the effect of the number and size of buffers on the number of lost events.
+	Run an experiment with clock_gettime_pthread to see the effect of the number and size of buffers on the number of lost events.
 	Builds on objectives:
 		7.1
+
+8.3:
+	Change lttng.sh to run getuid_pthread instead and add the set_cpus_perfomance script.
+	Builds on objectives:
+		7.1, 7.6
 
 9.1:
 	Use objective 8.1 to generate results on octosquare to extract scaling as the number of threads increases. Create R scripts to plot the data.
