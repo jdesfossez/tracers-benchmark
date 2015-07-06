@@ -5,6 +5,7 @@ cd $(dirname $0)
 prog_name=getuid_pthread
 tracer_name=lttng
 syscall=getuid
+no_cpus=$(nproc)
 
 no_threads=($(grep no_thread < ${tracer_name}.param))
 no_threads=${no_threads[@]:1}
@@ -41,7 +42,7 @@ function clean {
 ./set_cpus_performance.sh performance
 for no_thread in $no_threads; do
 	for sample_size in $sample_sizes; do
-		cmd="./$prog_name -s $sample_size -t $no_thread"
+		cmd="./$prog_name -s $sample_size -t $no_thread -n $no_cpus"
 		for output in $outputs; do
 			for overflow in $overflows; do
 				for num_subbuf in $num_subbufs; do

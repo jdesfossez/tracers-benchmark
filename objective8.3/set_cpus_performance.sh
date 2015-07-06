@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 let cpu_max=$(nproc)-1
 scaling_governor=$1
