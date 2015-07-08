@@ -1,0 +1,6 @@
+no_thread: 4
+sample_size: 8192 1048576
+output: splice
+overflow: discard
+num_subbuf: 16
+subbuf_size: 64

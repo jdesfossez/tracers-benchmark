@@ -1,0 +1,3 @@
+mean,std,no_lost_events,output,overflow,num_subbuf,subbuf_size,no_thread,sample_size
+1292.1,373.23,0,splice,discard,16,64,4,8192
+1215.4,7203.7,.512,splice,discard,16,64,4,1048576

@@ -296,6 +296,11 @@ Objectives
 	Builds on objectives:
 		8.2-8.3
 
+9.5:
+	Change lttng.sh to use the pid to count the number of lost events and express lost events as a fraction of expected events. Use lttng_view_discarded from Julien to confirm.
+	Builds on objectives:
+		7.7, 8.3
+
 10.1:
 	Same as 9.1, but densify samples for perf and ftrace: 1 2 4x ... 64
 	Builds on objective:
