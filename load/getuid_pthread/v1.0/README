@@ -1,0 +1,14 @@
+Program that repeatedly calls clock_gettime and getuid syscalls and stores the measured timestamps in memory. Timestamps are converted to intervals and the mean and std of the sample are computed. The sample, its mean and std are saved to file. The program is running on multiple threads (pthread).
+	Dependencies:
+		ts_util v1.0
+		bm_util v1.0
+	input:
+		arguments:
+			-s sample size
+			-t number of threads
+	output:
+		stdout: 
+			pid
+		file:
+			sample: "sample"
+			mean and std: "statistics"

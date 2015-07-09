@@ -1,0 +1,13 @@
+Script (lttng.sh) that reads parameters from lttng.param. For each paramerter set, it creates a lttng session, runs getuid_pthread, saves the trace to "traces/", saves the results to getuid_pthread_lttng.csv and destroys the session, the trace and the program outputs.
+	dependencies:
+		load getuid_pthread v1.0
+	input: lttng.param
+		number of threads 				no_thread
+		sample size 					sample_size
+		output mode: mmap, splice 		output
+		overflow: discard, overwrite	overflow
+		number of subbuffers 			num_subbuf
+		subbuffers size					subbuf_size
+	output:
+		getuid_pthread_lttng.csv:
+			fields: mean, std, no_lost_events, output, overflow, num_subbuf, subbuf_size, no_thread, sample_size

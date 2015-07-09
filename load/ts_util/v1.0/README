@@ -1,0 +1,8 @@
+Timespec utility (ts_util.h ts_util.c) and its test program (ts_test)
+defines type ts_t
+functions:
+	bool ts_is_equal(ts_t *t1, ts_t *t2): t1 == t2? 
+	bool ts_is_less(ts_t *t1, ts_t *t2): t1 < t2? 
+	ts_to_l(ts_t *t): convert to long
+	ts_t ts_sub(ts_t *t1, ts_t *t2): t1 -t2 
+	ts_printf(ts_t *t): print sec and nsec part of t

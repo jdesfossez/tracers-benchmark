@@ -1,0 +1,5 @@
+change_cpus_governor:
+	Script (change_cpus_governor.sh) to switch between performance and powersave scaling governors.
+
+lttng:
+	Script (lttng.sh) that reads parameters from lttng.param. For each paramerter set, it creates a lttng session, runs getuid_pthread, saves the trace to "traces/", saves the results to getuid_pthread_lttng.csv and destroys the session, the trace and the program outputs.

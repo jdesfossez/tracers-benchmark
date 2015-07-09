@@ -1,0 +1,4 @@
+Script (change_cpus_governor.sh) to switch between performance and powersave scaling governors.
+input:
+	argument: performance or powersave (not enforced, but checked)
+

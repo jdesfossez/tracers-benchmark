@@ -1,0 +1,10 @@
+v1.0:
+	Benchmark utility (bm_util.h bm_util.c), its test program (bm_test) and a R script (bm_test.R) to check statistics
+		Dependencies:
+			ts_util v1.0
+		functions:
+			double compute_mean(long *dt, int size)
+			double compute_std(long *dt, int size)
+			void save_intervals(long *dt, int size)
+			void save_statistics(double mean, double std)
+			void timestamps_to_intervals(ts_t *ti, ts_t *tf, long *dt, int size)
