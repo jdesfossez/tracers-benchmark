@@ -22,3 +22,10 @@ v3.0:
 	Compute trace size for each parameter set and add it to the result csv file.
 	Dependencies:
 		v2.0
+
+v4.0:
+	Add the delay parameter to the script parameters
+	Dependencies:
+		load getuid_pthread v2.0
+	input: lttng.param
+		number of iterations	delay
