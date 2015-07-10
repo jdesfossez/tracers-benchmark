@@ -14,4 +14,11 @@ v1.0:
 			fields: mean, std, no_lost_events, output, overflow, num_subbuf, subbuf_size, no_thread, sample_size
 
 v2.0:
+	Dependencies:
+		v1.0
 	Change subbuf_size parameter to total_buf_size, such that subbuf_size = total_buf_size / num_subbuf. If subbuf_size is smaller than the system page size (getconf PAGE_SIZE), skip the iteration.
+
+v3.0:
+	Compute trace size for each parameter set and add it to the result csv file.
+	Dependencies:
+		v2.0
