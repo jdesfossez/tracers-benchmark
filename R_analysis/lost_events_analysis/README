@@ -1,0 +1,11 @@
+v1.0:
+	R script that plots the fraction of lost events as a function of subbufer sizes and number of subbuffers
+	Dependencies:
+		scripts/lttng/v1.0
+	input: lttng.param
+		see scripts/lttng/v1.0
+
+v2.0:
+	Plot data from lttng v2.0. Graph the fraction of lost events as a function of number of subbuffers, but for various total buffer sizes.
+	Dependencies:
+		script/lttng/v2.0

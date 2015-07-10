@@ -1,6 +1,6 @@
 library("Hmisc")
 
-path <- "git/compare_tracers/R_analysis/lost_events_analysis/results/"
+path <- "git/compare_tracers/R_analysis/lost_events_analysis/v1.0/results/"
 
 paste_path <- function(filename){
   ret <- paste(path, filename, sep="")

@@ -2,7 +2,7 @@
 
 cd $(dirname $0)
 
-lttng_path=../../../scripts/lttng/v1.0
+lttng_path=../../../scripts/lttng/v2.0
 if [ -f $lttng_path/lttng.param ]; then
 	mv $lttng_path/lttng.param $lttng_path/lttng.param.old
 fi
