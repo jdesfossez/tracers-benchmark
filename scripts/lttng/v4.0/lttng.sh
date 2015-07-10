@@ -12,7 +12,7 @@ function compute_trace_size {
 function save_stats {
 	mean=($(grep mean < statistics))
 	std=($(grep std < statistics))
-	echo "${mean[1]},${std[1]},$no_lost_events,$output,$overflow,$num_subbuf,$total_buf_size,$total_trace_size,$no_thread,$sample_size" >> ${prog_name}_${tracer_name}.csv
+	echo "${mean[1]},${std[1]},$no_lost_events,$output,$overflow,$num_subbuf,$total_buf_size,$total_trace_size,$delay,$no_thread,$sample_size" >> ${prog_name}_${tracer_name}.csv
 }
 
 function clean {
@@ -70,7 +70,7 @@ if [ ! -d traces ]; then
 	mkdir traces
 fi
 #print to file csv field names
-echo "mean,std,no_lost_events,output,overflow,num_subbuf,total_buf_size,trace_size,no_thread,sample_size" > ${prog_name}_${tracer_name}.csv
+echo "mean,std,no_lost_events,output,overflow,num_subbuf,total_buf_size,trace_size,delay,no_thread,sample_size" > ${prog_name}_${tracer_name}.csv
 $change_cpus_governor_cmd performance
 #perform experiment
 for no_thread in $no_threads; do

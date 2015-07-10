@@ -24,7 +24,7 @@ v3.0:
 		v2.0
 
 v4.0:
-	Add the delay parameter to the script parameters
+	Add the delay parameter to the script parameters and to the .csv ouput file
 	Dependencies:
 		load getuid_pthread v2.0
 	input: lttng.param
