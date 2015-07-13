@@ -12,7 +12,7 @@ function compute_trace_size {
 function save_stats {
 	mean=($(grep mean < statistics))
 	std=($(grep std < statistics))
-	echo "${mean[1]},${std[1]},$frac_lost_events,$output,$overflow,$num_subbuf,$total_buf_size,$total_trace_size,$delay,$no_thread,$sample_size" >> ${prog_name}_${tracer_name}.csv
+	echo "${mean[1]},${std[1]},$frac_lost_events,$total_trace_size,$output,$overflow,$num_subbuf,$total_buf_size,$delay,$no_thread,$sample_size,$no_repetitions" >> ${prog_name}_${tracer_name}.csv
 }
 
 function clean {
@@ -39,7 +39,7 @@ function run {
 }
 
 function process_results {
-	Rscript average_results.R
+	Rscript average_results.R $no_repetitions
 	rm getuid_pthread_lttng_*.csv
 }
 
@@ -79,10 +79,9 @@ $change_cpus_governor_cmd performance
 #perform experiment
 for t in $(seq 1 $no_repetitions); do
 	#print to file csv field names
-	echo "mean,std,frac_lost_events,output,overflow,num_subbuf,total_buf_size,trace_size,delay,no_thread,sample_size" > ${prog_name}_${tracer_name}.csv
+	echo "mean,std,frac_lost_events,trace_size,output,overflow,num_subbuf,total_buf_size,delay,no_thread,sample_size,no_repetitions" > ${prog_name}_${tracer_name}.csv
 	for no_thread in $no_threads; do
 		for sample_size in $sample_sizes; do
-			sample_size=$(($sample_size / $no_repetitions))
 			for delay in $delays; do
 				cmd="./$prog_name -d $delay -s $sample_size -t $no_thread"
 				no_events_expected=$((2 * $sample_size + 2 * $no_thread))
