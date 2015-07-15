@@ -9,3 +9,6 @@ v2.0:
 	Plot data from lttng v2.0. Graph the fraction of lost events as a function of number of subbuffers, but for various total buffer sizes.
 	Dependencies:
 		script/lttng/v2.0
+
+v3.0:
+	Plot data from lttng v5.0. Modify run_lttng.sh to add results directory if not already present.
