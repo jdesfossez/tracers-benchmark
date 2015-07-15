@@ -22,6 +22,7 @@ for(output_op in levels(data$output)) {
           for(delay_op in levels(factor(data$delay))) {
             for(sample_size_op in levels(factor(data$sample_size))) {
               data_tmp <- data[which(data$output == output_op & data$overflow == overflow_op & data$num_subbuf == num_subbuf_op & data$total_buf_size == total_buf_size_op & data$no_thread == no_thread_op & data$sample_size == sample_size_op & data$delay == delay_op), ]
+			  if (nrow(data_tmp) == 0) next
               m <- format_output(mean(data_tmp$mean), 2)
               msd <- format_output(sd(data_tmp$mean), 2)
               f <- format_output(mean(data_tmp$frac_lost_events), 2)
