@@ -11,4 +11,4 @@ v2.0:
 		script/lttng/v2.0
 
 v3.0:
-	Plot data from lttng v5.0. Modify run_lttng.sh to add results directory if not already present.
+	Plot fraction of lost events accord to number of subbufers for various total buffer sizes. Data from lttng v5.0. Modify run_lttng.sh to add "results" directory if not already present.

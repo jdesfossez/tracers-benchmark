@@ -7,38 +7,67 @@ paste_path <- function(filename){
   return(ret)
 }
 
+gen_plot <- function(no_thread, sample_size, output, overflow, delay, data) {
+
+	total_buf_sizes <- levels(factor(data$total_buf_size))
+	print(total_buf_sizes)
+	data_num_subbuf <- list()
+	for(i in 1:length(total_buf_sizes)) {
+		data_num_subbuf[[i]] <- subset(data, total_buf_size == total_buf_sizes[[i]])
+	}
+	print(data_num_subbuf)
+	num_subbufs <- levels(factor(data$num_subbuf))
+	print(num_subbufs)
+	x_min_num_subbufs <- log2(as.numeric(num_subbufs[[1]]))
+	print(x_min_num_subbufs)
+
+	x_label <- "number of subbuffers"
+	y_label <- "Fraction of lost events"
+	title <- paste(y_label, "according to the", x_label, "\nfor", no_thread, "threads, sample size", sample_size, ", delay of", delay, "increments,\n channel mode:", output, overflow)
+	x_range <- range(data$num_subbuf)
+	y_range <- range(data$frac_lost_events)
+	print(x_range)
+	print(y_range)
+	fig_name <- paste_path("figs/")
+	fig_name <- paste(fig_name, "noth", no_thread, "_size", sample_size, "_output", output, "_overflow", overflow, "_delay", delay, ".pdf", sep = "")
+	pdf(fig_name)
+	plot(data_num_subbuf[[1]]$num_subbuf, data_num_subbuf[[1]]$frac_lost_events, xlim=x_range, ylim=y_range, xlab=x_label, ylab=y_label, xaxt="n", log="x", main=title, pch=1)
+	if (length(total_buf_sizes) > 1) {
+		for (i in 2:length(total_buf_sizes)) {
+			par(new=T)
+			plot(data_num_subbuf[[i]]$num_subbuf, data_num_subbuf[[i]]$frac_lost_events, xlim=x_range, ylim=y_range, xlab=x_label, ylab=y_label, xaxt="n", log="x", pch=i)
+		}
+	}
+	ticks=2^seq(x_min_num_subbufs,x_min_num_subbufs + length(num_subbufs),1)
+	axis(1, at=ticks, labels=ticks)
+	legend("topright", total_buf_sizes, pch = c(1:length(total_buf_sizes)), title = "buffer size (kb)")
+	dev.off()
+}
+
 paste_path("getuid_pthread_lttng.csv")
 
 data <- read.csv(paste_path("getuid_pthread_lttng.csv"))
-size <- 131072
-data <- subset(data, sample_size == size)
 print(data)
+no_threads <- levels(factor(data$no_thread))
+print(no_threads)
+sample_sizes <- levels(factor(data$sample_size))
+print(sample_sizes)
+outputs <- levels(data$output)
+print(outputs)
+overflows <- levels(data$overflow)
+print(overflows)
+delays <- levels(factor(data$delay))
+print(delays)
 
-total_buf_sizes <- levels(factor(data$total_buf_size))
-print(total_buf_sizes)
-data_num_subbuf <- list()
-for(i in 1:length(total_buf_sizes)) {
-  data_num_subbuf[[i]] <- subset(data, total_buf_size == total_buf_sizes[[i]])
+for (no_thread in no_threads) {
+	for (sample_size in sample_sizes) {
+		for (output in outputs) {
+			for (overflow in overflows) {
+				for (delay in delays) {
+					data_set <- data[which(data$no_thread == no_thread & data$sample_size == sample_size & data$output == output & data$overflow == overflow & data$delay == delay), ]
+					gen_plot(no_thread, sample_size, output, overflow, delay, data_set)
+				}
+			}
+		}
+	}
 }
-print(data_num_subbuf)
-num_subbufs <- levels(factor(data$num_subbuf))
-print(num_subbufs)
-x_min_num_subbufs <- log2(as.numeric(num_subbufs[[1]]))
-print(x_min_num_subbufs)
-
-x_label <- "number of subbuffers"
-y_label <- "Fraction of lost events"
-title <- paste(y_label, "according to", x_label, "\nfor various total buffer sizes and sample size", size)
-x_range <- range(data$num_subbuf)
-y_range <- range(data$frac_lost_events)
-pdf(paste_path("figs/num_subbuf.pdf"))
-plot(data_num_subbuf[[1]]$num_subbuf, data_num_subbuf[[1]]$frac_lost_events, xlim=x_range, ylim=y_range, xlab=x_label, ylab=y_label, xaxt="n", log="x", main=title, pch=1)
-if (length(total_buf_sizes) > 1) {
-	for (i in 2:length(total_buf_sizes)) {
-		par(new=T)
-		plot(data_num_subbuf[[i]]$num_subbuf, data_num_subbuf[[i]]$frac_lost_events, xlim=x_range, ylim=y_range, xlab=x_label, ylab=y_label, xaxt="n", log="x", pch=i)
-}
-ticks=2^seq(x_min_num_subbufs,x_min_num_subbufs + length(num_subbufs),1)
-axis(1, at=ticks, labels=ticks)
-legend("bottomleft", total_buf_sizes, pch = c(1:length(total_buf_sizes)), title = "buffer size (kb)")
-dev.off()
