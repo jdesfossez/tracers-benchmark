@@ -1,0 +1,1 @@
+v1.0: Scan lttng.sh for various delays with other parameters fixed to find the point where the number of lost events is zero. This is also the point with maximum event processing rate.
