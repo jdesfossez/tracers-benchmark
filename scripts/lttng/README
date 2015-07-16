@@ -33,3 +33,4 @@ v4.0:
 v5.0:
 	Change lttng.sh to run getuid_pthread 16 times. Write a R script (average_results.R) to average the results over the 16 trials.
 v5.1: Make no_repetitions configurable through lttng.param instead of fixed at value 16.
+v5.2: Correction to total_buf_size: Divide by the number of threads/cpus (the smaller) to allocate buffers per cpu
