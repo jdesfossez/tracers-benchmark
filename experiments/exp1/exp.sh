@@ -21,6 +21,7 @@ function run_plot_R {
 	R_path=../../R_analysis/lost_events/v3.0
 	cp getuid_pthread_lttng.csv $R_path/results
 	cd $R_path
+	rm figs/*
 	Rscript plot_data.R
 	cd $exp_path
 	cp -r $R_path/results/figs .
