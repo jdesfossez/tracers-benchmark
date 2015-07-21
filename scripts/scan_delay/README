@@ -1,2 +1,3 @@
 v1.0: Scan lttng.sh for various delays with other parameters fixed to find the point where the number of lost events is zero. This is also the point with maximum event processing rate.
 v2.0: Scan also the sample size to make sure that the trace size is at least 10 times the total buffer size
+v2.1: changed input file to "scan.param" and output from stdout to "scanned.param"
