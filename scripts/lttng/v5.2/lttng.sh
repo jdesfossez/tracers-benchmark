@@ -3,7 +3,7 @@
 function compute_trace_size {
 	total_trace_size=0
 	for cpu in $(seq 0 $cpu_max); do
-		trace_size=$(ls -l traces/kernel | grep channel0_$cpu | tr -s " " | cut -d" " -f5)
+		trace_size=$(ls -l traces/kernel | grep channel0_$cpu$ | tr -s " " | cut -d" " -f5)
 		total_trace_size=$(($total_trace_size + $trace_size))
 	done
 	total_trace_size=$(($total_trace_size / 1024))
