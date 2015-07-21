@@ -1,0 +1,4 @@
+delay: 6000 iterations
+sample size: 131072
+fraction of lost events: 0.00 +- 0.00,
+trace size: 5494 Kb +- 0
