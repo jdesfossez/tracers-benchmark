@@ -20,8 +20,11 @@ function run_lttng {
 function run_plot_R {
 	R_path=../../R_analysis/lost_events/v3.0
 	cp getuid_pthread_lttng.csv $R_path/results
+	if [ -d figs ]; then rm figs/*
+	else mkdir figs
+	fi
 	cd $R_path
-	rm figs/*
+	rm results/figs/*
 	Rscript plot_data.R
 	cd $exp_path
 	cp -r $R_path/results/figs .
