@@ -10,3 +10,6 @@ v1.0:
 			delay, standard error, approximate maximum rate
 v1.1:
 	The output file contains the delays for all input rates, such that the calibration is really complete.
+
+v2.0:
+	Rerun the calibration with the delays found to establish a baseline. Results are saved in getuid_pthread_calibrate.csv
