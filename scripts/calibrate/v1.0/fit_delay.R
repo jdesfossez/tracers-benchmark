@@ -14,6 +14,7 @@ no_ths <- levels(factor(data_all$no_th))
 
 fit <- list()
 no_th <- 1
+for (no_th in no_ths) {
 	data <- data_all[which(data_all$no_th == no_th), ]
 	#cor(data$delay, data$mean)
 	fit <- lm(data$mean ~ data$delay)
@@ -31,8 +32,9 @@ no_th <- 1
 	max <- 10^9 / coe[["(Intercept)"]]
 	max_er <- 10^9 / (coe[["(Intercept)"]] - sds[, 2][["(Intercept)"]]) - max
 
-	sink("calibrate.result")
+	sink(paste("calibrate_noth=", no_th, ".result", sep = ""))
 	cat(paste("delay: ", round(delay, digits = 0), "\n", sep=""))
 	cat(paste("err: ", round(er, digits = 0)), " (pm ", round(100 * er/delay, digits = 3), "%)\n", sep= "")
-	cat(paste("max rate: ", round(max, digits = 0), " (pm ", round(100 * max_er / max, digits = 0), "%)\n", sep = ""))
+	#cat(paste("max rate: ", round(max, digits = 0), " (pm ", round(100 * max_er / max, digits = 0), "%)\n", sep = ""))
 	sink()
+}

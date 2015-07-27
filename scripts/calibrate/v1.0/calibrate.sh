@@ -25,7 +25,7 @@ $change_cpus_governor_cmd performance
 echo "mean,delay,no_th" > ${prog_name}_calibrate.csv
 for no_thread in $no_threads; do
 	for delay in $delays; do
-		./$prog_name -d $delay -s 10000 -t $no_thread > /dev/null
+		./$prog_name -d $delay -s 100000 -t $no_thread > /dev/null
 		mean=($(grep mean < statistics)) 
 		echo "${mean[1]},$delay,$no_thread" >> ${prog_name}_calibrate.csv
 		rm sample
