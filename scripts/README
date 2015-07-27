@@ -3,3 +3,9 @@ change_cpus_governor:
 
 lttng:
 	Script (lttng.sh) that reads parameters from lttng.param. For each paramerter set, it creates a lttng session, runs getuid_pthread, saves the trace to "traces/", saves the results to getuid_pthread_lttng.csv and destroys the session, the trace and the program outputs.
+
+scan_delay:
+	Scan lttng.sh for various delays with other parameters fixed to find the point where the number of lost events is zero. This is also the point with maximum event processing rate.
+
+calibrate:
+	Script to convert a rate of events per second to a number of iterations of x++

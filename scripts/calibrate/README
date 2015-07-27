@@ -1,0 +1,11 @@
+v1.0:
+	Script to convert a rate of events per second to a number of iterations of x++
+	dependencies:
+		load getuid_pthread v2.0
+	input: calibrate.param
+		rate of events per seconds			event rate (events/second)
+	output:
+		getuid_pthread.csv
+		calibrate.result:
+			delay, standard error, approximate maximum rate
+
