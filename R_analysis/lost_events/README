@@ -12,3 +12,6 @@ v2.0:
 
 v3.0:
 	Plot fraction of lost events accord to number of subbufers for various total buffer sizes. Data from lttng v5.0. Modify run_lttng.sh to add "results" directory if not already present.
+
+v4.0:
+	Display both number of lost events and fraction of lost events. Points with no lost events are printed in green.
