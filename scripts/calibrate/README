@@ -3,9 +3,10 @@ v1.0:
 	dependencies:
 		load getuid_pthread v2.0
 	input: calibrate.param
-		rate of events per seconds			event rate (events/second)
+		rate of events per second			event rate (events/second)
 	output:
 		getuid_pthread.csv
 		calibrate.result:
 			delay, standard error, approximate maximum rate
-
+v1.1:
+	The output file contains the delays for all input rates, such that the calibration is really complete.
