@@ -49,7 +49,7 @@ gen_plot <- function(no_thread, sample_size, output, overflow, delay, data) {
 	ticks=2^seq(x_min_num_subbufs,x_min_num_subbufs + length(num_subbufs),1)
 	axis(1, at=ticks, labels=ticks)
 	yticks <- seq(yticks_info[1], yticks_info[2], (yticks_info[2] - yticks_info[1]) / yticks_info[3] )
-	fracs <- round(yticks / data_num_subbuf[[i]]$no_events_expected, digits=3)
+	fracs <- round(yticks / data_num_subbuf[[i]]$no_events_expected[1], digits=3)
 	axis(4, at=yticks, labels=fracs)
 	legend("topright", total_buf_sizes, pch = c(1:length(total_buf_sizes)), title = "buffer size (kb)")
 	dev.off()
