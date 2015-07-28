@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 benchmark_path=../../benchmarks/lttng/v1.0
 exp_path=$(pwd)
