@@ -3,3 +3,6 @@ exp. 1:
 
 exp. 2:
 	Lost events benchmark on octosquare
+
+exp. 3:
+	Lost events and overhead lttng benchmark on Julien Desfossez's i7
