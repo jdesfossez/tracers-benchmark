@@ -1,0 +1,10 @@
+v1.0:
+	benchmark.sh runs the calibration and then runs a lttng benchmark.
+	dependencies:
+		scripts 	calibration	v2.0
+					lttng 		v6.0
+		R_analysis	lost events	v4.1
+					overhead	v1.0
+	input:
+		calibration.param
+		lttng.param
