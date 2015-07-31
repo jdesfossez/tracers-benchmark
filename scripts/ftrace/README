@@ -1,0 +1,9 @@
+v1.0:
+	Merge of scripts/lttng/v6.0 and objectives/objective7.4/ to benchmark ftrace using trace-cmd.
+	Dependencies:
+		load getuid_pthread v2.0
+	input: perf.param
+		number of threads				no_thread
+		sample size						sample_size
+		number of x++ iterations		delay
+		number of runs of the program	no_repetition

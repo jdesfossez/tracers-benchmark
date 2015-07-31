@@ -9,3 +9,9 @@ scan_delay:
 
 calibrate:
 	Script to convert a rate of events per second to a number of iterations of x++
+
+perf:
+	Merge of scripts/lttng/v6.0 and objectives/objective7.3/ to benchmark perf.
+
+ftrace:
+	Merge of scripts/lttng/v6.0 and objectives/objective7.4/ to benchmark ftrace using trace-cmd.
