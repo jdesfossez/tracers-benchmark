@@ -15,3 +15,6 @@ perf:
 
 ftrace:
 	Merge of scripts/lttng/v6.0 and objectives/objective7.4/ to benchmark ftrace using trace-cmd.
+
+paraver:
+	 Script paraver_MPI.sh to calibrate and benchmark the paraver trace on a MPI workload with the ld_preload construct.

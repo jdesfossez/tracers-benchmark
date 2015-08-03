@@ -1,0 +1,10 @@
+v1.0:
+	Script paraver_MPI.sh to calibrate and benchmark the paraver trace on a MPI workload with the ld_preload construct.
+	Dependencies:
+		load/MPI_2Dexchange.c/v1.1
+	input: paraver_MPI.param
+		linear size
+		sample size
+	output:
+		paraver_MPI.calibration
+		paraver_MPI.ld_preload
