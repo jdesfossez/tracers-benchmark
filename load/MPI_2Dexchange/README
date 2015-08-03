@@ -6,3 +6,9 @@ v1.0:
 		verbose			argv[3]
 	output:
 		if verbose: out$rank contains sent and received messages for each round
+v1.1:
+	Implement proper parsing of input arguments
+	input:
+		linear size		-l
+		sample size		-s
+		verbose			-v
