@@ -12,3 +12,11 @@ v1.1:
 		linear size		-l
 		sample size		-s
 		verbose			-v
+
+v2.0:
+	Change input arguments to enable rectangular grids
+	input:
+		height		-h
+		width		-w
+		sample size	-s
+		verbose		-v
