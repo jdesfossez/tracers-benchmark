@@ -1,0 +1,8 @@
+v1.0:
+	Program that creates a 2D square lattice of linear size argv[1] and exchanges messages with nearest neighbours. The messages are randoms numbers between 0 and 9. There are arg[2] rounds of exchange.
+	input:
+		linear size 	argv[1]
+		sample size		argv[2]
+		verbose			argv[3]
+	output:
+		if verbose: out$rank contains sent and received messages for each round
