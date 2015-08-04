@@ -37,6 +37,8 @@ v5.2: Correction to total_buf_size: Divide by the number of threads/cpus (the sm
 
 v6.0:
 	Change output to display the number of lost events and the expected total number of events
+v6.1:
+	Correction to total buffer size = num_subbuf * subbuf_size * no_cpus. Print parameters being benchmarked.
 
 v7.0:
 	Strip simulation to bare minimum, remove parameters output, overflow, total buffer size and number of subbuffers
