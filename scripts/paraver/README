@@ -17,3 +17,14 @@ v2.0:
 		height
 		width
 		sample size
+
+v3.0:
+	Split input parameters for calibration and paraver in two separate files. Add the total number of MPI_Send and MPI_Recv calls (num_MPI_msgs) and the number of processes in the output file. Add the .csv extension to the output files.
+	Dependencies:
+		load/MPI_2Dexchange/v2.0
+	input:
+		paraver_MPI.calibration.param
+		paraver_MPI.ld_preload.param
+		num_MPI_msgs	total number of MPI_Send and MPI_Recv
+	output:
+		num_procs		number of processes
