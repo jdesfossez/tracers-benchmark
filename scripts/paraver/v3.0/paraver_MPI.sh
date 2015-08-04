@@ -32,7 +32,7 @@ function run {
 				minutes=$(grep "real" < time.out | cut -f2 | cut -d'm' -f1)
 				seconds=$(grep "real" < time.out | cut -f2 | cut -d'm' -f2 | cut -d's' -f1)
 				time=$(echo "60 * $minutes + $seconds" | bc)
-				echo "$time,$height,$width,$area,$sample_size,$num_MPI_msgs" >> $output_file
+				echo "$time,$height,$width,$area,$sample_size,$num_MPI_msgs" >> ${output_file}.csv
 				clean
 			done
 		done
