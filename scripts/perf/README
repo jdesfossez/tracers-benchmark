@@ -7,3 +7,5 @@ v1.0:
 		sample size						sample_size
 		number of x++ iterations		delay
 		number of runs of the program	no_repetition
+v1.1:
+	Read the total trace size as the size of the file perf.data
