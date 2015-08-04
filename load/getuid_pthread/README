@@ -21,3 +21,11 @@ v2.0:
 	input:
 		arguments:
 			-d delay
+
+v3.0:
+	Add an option to enable the "set_affinity" of threads.
+	Dependencies:
+		v2.0
+	input:
+		arguments:
+			-a (for "affinity")
