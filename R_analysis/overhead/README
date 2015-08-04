@@ -2,3 +2,5 @@ v1.0:
 	Script to plot the overhead instead of the lost events. Strongly inspired by lost_events
 v1.1:
 	Added lines to join points together.
+v1.2:
+	Divide times by two to express overhead per event instead of overhead per syscall. Round the percentages to two digits.
