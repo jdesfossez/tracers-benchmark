@@ -17,3 +17,5 @@ v4.0:
 	Display both number of lost events and fraction of lost events. Points with no lost events are printed in green.
 v4.1:
 	Renamed script to lost_events.R and added a second y axis for percentage of lost events.
+v4.2:
+	Add lines to join points together. Round percentages to two digits.
