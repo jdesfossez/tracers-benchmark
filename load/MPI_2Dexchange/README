@@ -20,3 +20,5 @@ v2.0:
 		width		-w
 		sample size	-s
 		verbose		-v
+v2.1:
+	Avoid using random number generation for message creation. Use definite values based on program parameters (e.g. rank, count and msg)
