@@ -1,0 +1,2 @@
+v1.0:
+	Plot the time required to run MPI_2dexchange without and with paraver tracing.
