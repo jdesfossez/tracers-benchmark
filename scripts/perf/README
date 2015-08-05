@@ -9,3 +9,7 @@ v1.0:
 		number of runs of the program	no_repetition
 v1.1:
 	Read the total trace size as the size of the file perf.data
+v1.2:
+	Correct calculation of number of lost events using perf script instead of perf report. Add the perf path in the parameters file. Add the running parameters throughout the benchmark.
+	input:
+		perf_path		path to perf
