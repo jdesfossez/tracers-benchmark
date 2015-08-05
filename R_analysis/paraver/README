@@ -1,2 +1,4 @@
 v1.0:
 	Plot the time required to run MPI_2dexchange without and with paraver tracing.
+v1.1:
+	Change plot titles and labels and force x axis to use scientific notation.
