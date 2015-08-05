@@ -28,3 +28,5 @@ v3.0:
 		num_MPI_msgs	total number of MPI_Send and MPI_Recv
 	output:
 		num_procs		number of processes
+v3.1:
+	Use script change_cpus_governor to fix cpu frequency to max
