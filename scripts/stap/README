@@ -1,0 +1,10 @@
+v1.0:
+	Mergo of scripts/lttng/v6.0 and objectives/objective7.2/stap.sh to benchmark system tap.
+	dependencies:
+		load/getuid_pthread/v2.0
+	input: stap.param
+		number of threads               no_thread
+		sample size                     sample_size
+		number of x++ iterations        delay
+		number of runs of the program   no_repetition
+

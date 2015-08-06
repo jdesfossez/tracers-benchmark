@@ -1,0 +1,2 @@
+probe syscall.getuid {printf("[%ld] %ld: syscall.getuid.entry\n", gettimeofday_ns(), pid())}
+probe syscall.getuid.return {printf("[%ld] %ld: syscall.getuid.exit\n", gettimeofday_ns(), pid())}
