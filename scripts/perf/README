@@ -13,3 +13,6 @@ v1.2:
 	Correct calculation of number of lost events using perf script instead of perf report. Add the perf path in the parameters file. Add the running parameters throughout the benchmark.
 	input:
 		perf_path		path to perf
+
+v2.0:
+	Add clean function. Remove hardcoded paths for change cpus governor path and load path.
