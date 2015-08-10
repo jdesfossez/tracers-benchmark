@@ -13,3 +13,6 @@ v1.1:
 
 v2.0:
 	Rerun the calibration with the delays found to establish a baseline. Results are saved in getuid_pthread_calibrate.csv
+
+v3.0:
+	Remove hardcorded paths to other scripts, move them to the parameter file. Same for sample_size, add to param file. Echo command currently running. Add clean option
