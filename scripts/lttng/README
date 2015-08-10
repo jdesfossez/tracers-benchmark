@@ -42,3 +42,6 @@ v6.1:
 
 v7.0:
 	Strip simulation to bare minimum, remove parameters output, overflow, total buffer size and number of subbuffers
+
+v8.0:
+	 Add clean and load_params functions. Remove hardcoded paths for change cpus governor path and load path.
