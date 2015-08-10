@@ -8,3 +8,5 @@ v1.0:
 		number of x++ iterations        delay
 		number of runs of the program   no_repetition
 
+v2.0:
+	Add clean function. Remove hardcoded paths for change cpus governor path and load path.
