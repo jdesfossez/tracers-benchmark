@@ -35,6 +35,7 @@ function clean {
 }
 
 function run {
+	echo "sudo trace-cmd record -e 'syscalls:sys_enter_getuid' -e 'syscalls:sys_exit_getuid' -F -c $cmd 1>trace.out  2>trace.err"
 	sudo trace-cmd record -e 'syscalls:sys_enter_getuid' -e 'syscalls:sys_exit_getuid' -F -c $cmd 1>trace.out  2>trace.err
 	pid=$(grep "pid:" < trace.out | cut -d" " -f2)
 	no_events=$(grep "read events:" < trace.out | cut -d" " -f3 | awk '{s+=$1} END {print s}')
