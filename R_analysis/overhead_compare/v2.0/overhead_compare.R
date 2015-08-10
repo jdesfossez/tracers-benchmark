@@ -53,7 +53,7 @@ for (i in 1:length(tracers)) {
 			data_calib$mean <- data_calib$mean /2
 			data_tr <- data_trace[[i]][which(data_trace[[i]]$sample_size == sample_size & data_trace[[i]]$delay == delay), ]
 			data_tr$mean <- data_tr$mean / 2
-			#gen_plot(sample_size, delay, data_tr, data_calib, tracers[i])
+			gen_plot(sample_size, delay, data_tr, data_calib, tracers[i])
 		}
 	}
 }
