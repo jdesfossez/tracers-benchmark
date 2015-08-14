@@ -7,3 +7,6 @@ v1.2:
 
 v2.0:
 	Add plots with the results from all the tracers.
+
+v3.0:
+	Add the "average_results.R" script and generalize it to be able to apply it to any tracer.
