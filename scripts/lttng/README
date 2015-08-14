@@ -52,3 +52,8 @@ v9.0:
 	Add clean and load_params functions. Remove hardcoded paths for change cpus governor path and load path.
 	dependencies:
 		lttng v6.1
+
+v10.0:
+	Remove Rscript average_results.R, instead use the script from R_analysis/overhead_compare/v3.0/average_results.R
+	dependencies:
+		lttng v8.0
