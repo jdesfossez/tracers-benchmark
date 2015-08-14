@@ -10,3 +10,6 @@ v1.0:
 
 v2.0:
 	Add clean function. Remove hardcoded paths for change cpus governor path and load path
+
+v3.0:
+	Remove Rscript average_results.R, instead use the script from R_analysis/overhead_compare/v3.0/average_results.R
