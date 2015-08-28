@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 cd $(dirname $0)
 if [ "$1" == "clean" ]; then

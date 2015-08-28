@@ -1,0 +1,52 @@
+\documentclass{article}
+
+\usepackage{listings}
+
+\author{Guillaume Duclos-Cianci}
+\date{\today}
+\title{Benchmarking tool\\to compare various tracing solutions}
+
+\begin{document}
+
+\maketitle
+
+\section{Objective}
+
+Create a simple program that benchmarks the getuid system call to extract the overhead introduced by various tracers.
+
+\section{Structure}
+
+\subsection{Program}
+
+The benchmark is performed in the following manner. First a timestamp is taken using a call to $clock\_gettime$. The value is saved in a timespec table. The system call $getuid$ is then performed. This process is repeted over and over such that two consecutive timstamps represent the time necessary to perform $clock\_gettime$ plus $getuid$ plus the loop to next round.
+
+Here is a snippet of the code performing the benchmark.
+\begin{lstlisting}
+    for(ts_iter, i; i < BURST_SIZE; ts_iter++, i++){
+        clock_gettime(CLOCK_MONOTONIC_RAW, ts_iter);
+        getuid();
+    }   
+    clock_gettime(CLOCK_MONOTONIC_RAW, ts_iter);
+\end{lstlisting}
+
+The program arguments are the sample size ($-s$), the number of threads ($-t$) and the number of cores to benchmark ($-n$).
+
+\subsection{scripts}
+
+Tracers:
+\begin{enumerate}
+	\item Lttng
+	\item perf
+	\item ftrace
+	\item system tap
+\end{enumerate}
+
+\subsection{Lttng}
+
+The parameters explored for Lttng are the number of subbuffers, \textit{num-subbuf}, and their size, \textit{subbuf-size}. We also compare standard output writtent to disk and snapshot mode.
+
+\subsection{System tap}
+
+Various probe contents were tested. In all cases, the scaling was prohibitive.
+
+\end{document}

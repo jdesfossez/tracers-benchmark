@@ -50,8 +50,8 @@ change_cpus_governor_path=../../change_cpus_governor/v1.0
 mpirun -np 4 ./$prog_name -h 2 -w 2 -s 10
 #no tracing
 output_file="paraver_MPI.calibration"
-load_params
-run
+#load_params
+#run
 
 export EXTRAE_HOME=/home/gdc/opt/extrae
 export EXTRAE_CONFIG_FILE=extrae.xml
